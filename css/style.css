@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+.mi-botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+    outline:none;
+    text-decoration: none;
+}
+
+.mi-botones a{
+    display: inline-block;
+    background-color: #8e44ad; /* Un morado más intenso */
+    padding: 15px 30px;
+    border-radius: 50px;
+    outline: none;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+}
+.mi-botones a:hover{
+    background-color: #9b59b6; /* Un morado más claro al pasar el mouse */
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(142, 68, 173, 0.4);
+}
+.mi-descripcion{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .mi-descripcion{
+        font-size: 2rem;
+    }
+    
+    .mi-contenedor-boton a{
+        font-size: 1rem;
+    }
+}
