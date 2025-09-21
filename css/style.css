@@ -1,59 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 *{
-    font-family: 'Poppins',cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body{
-    color: azure;
     width: 100%;
-    height: 82vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    /* padding-top: -30; */
-}
-.mi-botones{
-    padding: 9px;
-    border-radius: 80px;
-    background-color: transparent;
-    border: none;
-    outline:none;
-    text-decoration: none;
+    background: #000; /* Fondo negro como pediste */
+    font-family: Tahoma, sans-serif; /* Fuente Tahoma */
+    color: #e0e0e0;
+    text-align: center;
+    padding: 20px;
 }
 
-.mi-botones a{
+.mi-descripcion{
+    font-family: Tahoma, sans-serif; /* Fuente más decorativa */
+    font-size: 2rem;
+    margin-bottom: 50px; /* Aumentamos un poco el espacio */
+    color: #4100d8; /* Tono lavanda/lila claro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mi-botones{
+    /* Estilos para el enlace que ahora es el botón */
     display: inline-block;
-    background-color: #8e44ad; /* Un morado más intenso */
-    padding: 15px 30px;
+    padding: 15px 35px;
     border-radius: 50px;
-    outline: none;
     text-decoration: none;
     color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-out;
+    font-weight: 400;
+    font-size: 1.1rem;
+    background: #8e44ad; /* Tono morado sólido */
+    box-shadow: 0 5px 20px rgba(142, 68, 173, 0.4); /* Sombra a juego con el morado */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
 }
-.mi-botones a:hover{
-    background-color: #9b59b6; /* Un morado más claro al pasar el mouse */
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(142, 68, 173, 0.4);
+
+.mi-botones:hover{
+    background: #9b59b6; /* Morado más claro al pasar el mouse */
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(155, 89, 182, 0.5); /* Sombra más intensa */
 }
-.mi-descripcion{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+
+.mi-botones::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
 }
-@media screen and (max-width:574px){
-    .greetings{
-        display: block;
-        font-size: 4rem;
-        font-weight: 800;
-        text-align: center;
-    }
+
+.mi-botones:hover::before {
+    left: 100%;
+}
+
+@media screen and (max-width: 574px){
     .mi-descripcion{
-        font-size: 2rem;
-    }
-    
-    .mi-contenedor-boton a{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
