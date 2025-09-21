@@ -118,10 +118,9 @@ body {
 @media only screen and (max-width: 600px) {
   /* Estilos específicos para dispositivos con un ancho máximo de 600px */
 .mi-contenedor-flores {
-      font-size: 14px;
-      margin-bottom: 35%;
-      letter-spacing: 3px;
-      transform: scale(1.0);
+      /* Ajustamos la escala para que se vea bien en móviles */
+      transform: scale(0.7); 
+      margin-bottom: 0; /* Eliminamos el margen que causaba el scroll */
 }
 
 }
@@ -1644,7 +1643,7 @@ h1 {
   h1 {
       font-size: 1.3em; /* Reducido para mejor visibilidad en móviles */
       text-align: center; /* Centramos el título */
-      top: 28%; /* Ajustamos la posición para móviles */
+      top: 15%; /* Subimos el título para que sea más visible */
   }
 }
 
