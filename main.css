@@ -26,28 +26,35 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
   position: absolute;
-  margin-bottom: 20%;
+  top: 15%; /* Lo posicionamos desde arriba */
+  left: 50%; /* Lo centramos horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
   z-index: 1;
   font-weight: bold;
   letter-spacing: 4px;
+  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   /* Estilos específicos para dispositivos con un ancho máximo de 600px */
   #mi-letra {
       font-size: 14px; /* Reduce el tamaño del texto para dispositivos más pequeños */
-      margin-bottom: 530px;
+      top: 20%; /* Ajustamos la posición para móviles */
       letter-spacing: 3px;
+      width: 90%; /* Evitamos que el texto se desborde */
   }
 
 }
 .mi-titulo {
   font-family: "Pacifico", cursive;
   color: #fff;
-  font-weight: bold;
   position: absolute;
+  top: 25%; /* Lo posicionamos debajo del otro texto */
+  left: 50%; /* Lo centramos horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino para centrado perfecto */
   letter-spacing: 10px;
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
+  text-align: center;
 }
 @keyframes fadeIn {
   from {
@@ -1635,8 +1642,9 @@ h1 {
 @media screen and (max-width: 600px) {
   /* Estilos para pantallas pequeñas */
   h1 {
-      font-size: 0.7em; /* Reducido para mejor visibilidad en móviles */
+      font-size: 1.3em; /* Reducido para mejor visibilidad en móviles */
       text-align: center; /* Centramos el título */
+      top: 28%; /* Ajustamos la posición para móviles */
   }
 }
 
